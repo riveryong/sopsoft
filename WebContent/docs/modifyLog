@@ -1,0 +1,4 @@
+#2013-8-26
+①将html,uifw,views移到WEB-INF下
+②修改web.xml, “<servlet-mapping>.<url-pattern>”由[*.do]改为[/],使用REST风格提交
+③为了使用REST风格提交方式，需要在spring-servlet中，配置“<!-- 静态资源映射 -->”，使servlet不拦截对静态资源的访问

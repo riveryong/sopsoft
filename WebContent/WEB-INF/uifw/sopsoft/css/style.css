@@ -1,0 +1,235 @@
+/* InputForm Base */
+.sInputForm {
+  position: relative;
+  margin: 5px 5px 5px 0;
+  padding: 10px 8px 5px;
+  *padding-top: 10px;
+  background-color: #fff;
+  /*border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;*/
+}
+
+/* Echo out a label for InputForm*/
+.sInputForm:after {
+  /*content: "Example";*/
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+
+/* Remove spacing between an form and it's code */
+.sInputForm + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+/* Tweak examples
+------------------------- */
+.sInputForm > p:last-child {
+  margin-bottom: 0;
+}
+.sInputForm .table,
+.sInputForm .progress,
+.sInputForm .well,
+.sInputForm .alert,
+.sInputForm .hero-unit,
+.sInputForm .pagination,
+.sInputForm .navbar,
+.sInputForm > .nav,
+.sInputForm blockquote {
+  margin-bottom: 5px;
+}
+.sInputForm .pagination {
+  margin-top: 0;
+}
+
+/* InputForm input group
+-------------------------*/
+.sInputForm .control-group {
+  margin-bottom: 10px;
+  *zoom: 1;
+}
+
+.sInputForm .control-label {
+  float: left;
+  width: 100px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.sInputForm .controls {
+  *display: inline-block;
+  *padding-left: 10px;
+  margin-left: 110px;
+  *margin-left: 0;
+}
+
+.sInputForm .controls:first-child {
+  *padding-left: 110px;
+}
+
+/*form common
+------------------------*/
+legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 21px;
+	line-height: 35px;
+	color: #333333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;  
+}
+legend small {
+	font-size: 15px;
+	color: #999999;
+}
+
+.small_margin {
+	margin-left:5px;
+}
+
+.lableShadow {
+	text-shadow:5px 2px 6px #000;
+}
+
+.form-search .add_margin_bottom{
+	margin-bottom:10px;
+}
+
+/* Header
+-------------------------------------------------- */
+.header-sty {
+  min-height: 20px;
+  padding: 19px 5px 0 10px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+/* Overide bootstrap.css
+--------------------------------------------------*/
+.input-append{
+  margin-bottom:10px;
+  vertical-align:middle;
+}
+
+
+/* left_side_bar
+-------------------------------------------------- */
+
+.left_side_bar {
+  width: 140px;
+  margin: 5px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.left_side_bar > li > a {
+  align:center;
+  display: block;  
+  width: 110px \9;
+  margin: 0 0 -1px;
+  padding: 8px 5px 8px 18px;
+  border: 1px solid #e5e5e5;
+}
+.left_side_bar > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.left_side_bar > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.left_side_bar > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.left_side_bar .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.left_side_bar > li > a:hover {
+  background-color: #f5f5f5;
+}
+.left_side_bar a:hover .icon-chevron-right {
+  opacity: .5;
+}
+
+/*
+.left_side_bar .active .icon-chevron-right,
+.left_side_bar .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.left_side_bar.affix {
+  top: 40px;
+}
+.left_side_bar.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}*/
+
+
+
