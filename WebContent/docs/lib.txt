@@ -1,6 +1,4 @@
-ƒtƒHƒ‹ƒ_[ ƒpƒX‚Ìˆê——
-ƒ{ƒŠƒ…[ƒ€ ƒVƒŠƒAƒ‹”Ô†‚Í 00000200 5C6E:937B ‚Å‚·
-D:.
+// å·¥ç¨‹ä»¥æ¥çš„jaråŒ…ä¸€è§ˆ
     ant-1.6.5.jar
     antlr-3.3-complete.jar
     aopalliance-1.0.jar
@@ -95,6 +93,4 @@ D:.
     xml-apis-ext-1.3.04.jar
     xmlgraphics-commons-1.4.jar
     xwork-core-2.1.6.jar
-    
-ƒTƒuƒtƒHƒ‹ƒ_[‚Í‘¶İ‚µ‚Ü‚¹‚ñ 
 
