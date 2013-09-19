@@ -1,10 +1,17 @@
 package sopsoft.demo.action;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jodd.typeconverter.Convert;
+
 import net.sopsoft.utils.shutil.ConditionManager;
 import net.sopsoft.utils.shutil.IPublicService;
+
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,12 +20,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.hp.hpl.sparta.xpath.ThisNodeTest;
+
 import sopsoft.demo.entity.User;
 
 @Controller
 @RequestMapping("/member")
 public class MemberAction {
 
+	private static Logger loger = Logger.getLogger(MemberAction.class);
 	@Autowired
 	private IPublicService publicService;
 	
@@ -35,12 +45,19 @@ public class MemberAction {
 	
 	@RequestMapping("/check")
 	@ResponseBody
-	public String check(@RequestParam  String username,HttpServletRequest request,HttpServletResponse response) {
+	public Map<String, String> check(@RequestParam  String username,HttpServletRequest request,HttpServletResponse response) {
+		loger.info("Member/check,开始检查会员编号是否重复");
+		loger.debug("username:"+username);
 		Long count = (Long) publicService.normalPublicSearch(User.class,false,cm.eq("username", username),cm.aggregate().count("username")).get(0);
+		Map<String, String> modelMap = new HashMap<String, String>();
 		if (count == 0) {
-			return "{'count':"+count+",'msg':'MemberNo OK!'}"; 
+			modelMap.put("count", Convert.toString(count));
+			modelMap.put("msg", "MemberNo OK!");
+			return modelMap;
 		}else {
-			return "{'count':"+count+",'msg':'MemberNo repeat!'}"; 
+			modelMap.put("count", Convert.toString(count));
+			modelMap.put("msg", "MemberNo repeat!");
+			return modelMap;
 		}
 	}
 	
