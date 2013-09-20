@@ -1,4 +1,4 @@
-package net.sopsoft.utils.tag;
+package net.sopsoft.framework.tag;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
-import net.sopsoft.utils.shutil.ConditionManager.Page;
+import net.sopsoft.framework.shutil.ConditionManager.Page;
 
 public class PaginationTag extends BodyTagSupport {
 

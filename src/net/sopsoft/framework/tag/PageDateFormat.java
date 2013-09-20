@@ -1,4 +1,4 @@
-package net.sopsoft.utils.tag;
+package net.sopsoft.framework.tag;
 
 import java.io.IOException;
 import java.sql.Timestamp;

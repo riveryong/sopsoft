@@ -1,4 +1,4 @@
-package net.sopsoft.utils.shutil;
+package net.sopsoft.framework.shutil;
 
 public class SizeException extends Exception {
 	

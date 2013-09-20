@@ -1,4 +1,4 @@
-package net.sopsoft.utils.shutil;
+package net.sopsoft.framework.shutil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,9 +6,9 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import net.sopsoft.utils.shutil.ConditionManager.OrderCondition;
-import net.sopsoft.utils.shutil.ConditionManager.Page;
-import net.sopsoft.utils.shutil.ConditionManager.PageCondition;
+import net.sopsoft.framework.shutil.ConditionManager.OrderCondition;
+import net.sopsoft.framework.shutil.ConditionManager.Page;
+import net.sopsoft.framework.shutil.ConditionManager.PageCondition;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
