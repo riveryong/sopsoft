@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import jodd.typeconverter.Convert;
 
-import net.sopsoft.utils.shutil.ConditionManager;
-import net.sopsoft.utils.shutil.IPublicService;
+import net.sopsoft.framework.shutil.ConditionManager;
+import net.sopsoft.framework.shutil.IPublicService;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,15 +21,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.hp.hpl.sparta.xpath.ThisNodeTest;
-
 import sopsoft.demo.entity.User;
 
 @Controller
 @RequestMapping("/member")
 public class MemberAction {
 
-	private static Logger loger = Logger.getLogger(MemberAction.class);
+	private static Logger loger = LoggerFactory.getLogger(MemberAction.class);
 	@Autowired
 	private IPublicService publicService;
 	
