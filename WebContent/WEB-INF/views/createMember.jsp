@@ -74,32 +74,30 @@
 				var options = {
 						url: "member/check",
 						data: {'username':$('#txtMemberNo').val()},
-						dataType:'text',
+						dataType:'json',
 						cache: false,
 						error:function (XMLHttpRequest, textStatus, errorThrown) {
 									alert('ajax error!');
 									alert(textStatus);
 									alert(errorThrown);
 								},
-						success: function(objStr){
-										var obj = eval("("+objStr+")");
-					   					if(obj.count == 0){
-					   						$('#txtMemberNo').after("<span id='msg' class='help-inline'>"+obj.msg+"</span>");
-					   					}else{
-					   						$('#txtMemberNo').after("<span id='msg' class='help-inline error'>"+obj.msg+"</span>");
-					   						$('div:has(#txtMemberNo)').addClass("error");
-					   					}
-								   }
+						success: function(data){
+							        alert("与此会员编号相同的会员数："+data.count+",消息："+data.msg)
+				   					if(data.count == 0){
+				   						$('#txtMemberNo').after("<span id='msg' class='help-inline'>这是第"+(data.count+2)+"个会员；"+data.msg+"</span>");
+				   					}else{
+				   						$('#txtMemberNo').after("<span id='msg' class='help-inline error'>"+data.msg+"</span>");
+				   						$('div:has(#txtMemberNo)').addClass("error");
+				   					}
+							   }
 					};
-				$.ajax(options);				
+				$.ajax(options);
 			});
-			
 			
 			$("#txtMemberNo").focus(function(){
 				$('div:has(#txtMemberNo)').removeClass("error");
 				$('#msg').remove();
 			});
-
 		});
 	</script>
 </body>
