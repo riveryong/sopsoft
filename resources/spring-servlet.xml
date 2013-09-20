@@ -53,7 +53,8 @@
 	<!-- 当在web.xml 中 DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
 	<!--<mvc:default-servlet-handler/>--> 
 	<!-- 静态资源映射 -->
-	<mvc:resources mapping="/bootstrapCss/**" location="/WEB-INF/uifw/bootstrap/css/" />
+	<mvc:resources mapping="/ui/**" location="/WEB-INF/uifw/" />
+	<!-- <mvc:resources mapping="/bootstrapCss/**" location="/WEB-INF/uifw/bootstrap/css/" />
 	<mvc:resources mapping="/bootstrapImg/**" location="/WEB-INF/uifw/bootstrap/img/" />
 	<mvc:resources mapping="/bootstrapJs/**" location="/WEB-INF/uifw/bootstrap/js/" />
 	<mvc:resources mapping="/grumbleCss/**" location="/WEB-INF/uifw/grumble/css/" />
@@ -65,8 +66,7 @@
 	<mvc:resources mapping="/sopsoftCss/**" location="/WEB-INF/uifw/sopsoft/css/" />
 	<mvc:resources mapping="/sopsoftJs/**" location="/WEB-INF/uifw/sopsoft/js/" />
 	<mvc:resources mapping="/jq/**" location="/WEB-INF/uifw/jq/" />
-
-   
+ -->
     
 	<!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
 	<bean id="defaultViewResolver"

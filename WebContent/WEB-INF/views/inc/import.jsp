@@ -1,6 +1,6 @@
-<link href="<c:url value='/bootstrapCss/bootstrap.css'/>" rel="stylesheet">
-<link href="<c:url value='/sopsoftCss/style.css'/>" rel="stylesheet">
-<script type="text/javascript" src="<c:url value='/jq/jquery-1.8.3.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/bootstrapJs/bootstrap.js'/>"></script>	
-<script type="text/javascript" src="<c:url value='/sopsoftJs/fw.js'/>"></script>
+<link href="<c:url value='/ui/bootstrap/css/bootstrap.css'/>" rel="stylesheet">
+<link href="<c:url value='/ui/sopsoft/css/style.css'/>" rel="stylesheet">
+<script type="text/javascript" src="<c:url value='/ui/jq/jquery-1.8.3.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/ui/bootstrap/js/bootstrap.js'/>"></script>	
+<script type="text/javascript" src="<c:url value='/ui/sopsoft/js/fw.js'/>"></script>
 	
