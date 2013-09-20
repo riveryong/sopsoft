@@ -48,6 +48,7 @@ public class MemberAction {
 	public Map<String, String> check(@RequestParam  String username,HttpServletRequest request,HttpServletResponse response) {
 		loger.info("Member/check,开始检查会员编号是否重复");
 		loger.debug("username:"+username);
+		System.out.println(this.getClass().getClassLoader().getResource("").getPath());
 		Long count = (Long) publicService.normalPublicSearch(User.class,false,cm.eq("username", username),cm.aggregate().count("username")).get(0);
 		Map<String, String> modelMap = new HashMap<String, String>();
 		if (count == 0) {
