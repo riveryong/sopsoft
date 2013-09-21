@@ -10,20 +10,20 @@
 	       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd  
 	       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd  
 	       ">
-	<!-- 启动注解扫描 -->     
-    <context:component-scan base-package="sopsoft" />    
-    <context:component-scan base-package="net.sopsoft.utils.*" />
-	<!-- 加载资源文件 -->  
+	<!-- 启动注解扫描 -->
+    <context:component-scan base-package="sopsoft" />
+    <context:component-scan base-package="net.sopsoft.framework.*" />
+	<!-- 加载资源文件 -->
     <context:property-placeholder location="classpath:dbconfig.properties"/>  
   
     <!-- 数据库映射  -->
     <!-- 数据源1 -->
     <bean id="dataSource"  
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-        <property name="driverClassName" value="${connection.driver_class}"/>  
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${connection.driver_class}"/>
         <property name="url" value="${connection.url.sopsoft}"/>  
-        <property name="username" value="${connection.username.sopsoft}"/>  
-        <property name="password" value="${connection.password.sopsoft}"/>  
+        <property name="username" value="${connection.username.sopsoft}"/>
+        <property name="password" value="${connection.password.sopsoft}"/>
     </bean>
     
     <!-- 数据源2 淘宝开源数据库连接池 -->
